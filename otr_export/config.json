@@ -1,0 +1,26 @@
+{
+    // Onshape assembly URL
+    "url": "https://cad.onshape.com/documents/8be6f34d6245cb6a3128bb98/w/9190b89b2c9ca32535b822e8/e/e1bee2a20fbd19c3190e8f07",
+
+    // Output format (required)
+    "output_format": "mujoco",
+
+    // Passive joints in the 4-bar loop, both legs — no actuator generated
+    // for these (motor-driven joints are left out, they default to actuated: true)
+    "joint_properties": {
+        "3bar_l3_L": { "actuated": false, "range": false },
+        "3bar_l3_R": { "actuated": false, "range": false },
+        "l3_L": { "actuated": false, "range": false },
+        "l3_R": { "actuated": false, "range": false },
+        "wheel_L": { "type": "motor", "range": false },
+        "wheel_R": { "type": "motor", "range": false },
+        "servo_l2_L": { "limits": [-3.14159, 3.14159] },
+        "servo_l2_R": { "limits": [-3.14159, 3.14159] }
+    },
+
+    // Equality constraints from the closing_ mates, both legs
+    "equalities": {
+        "closing_3bar_l1_L": {},
+        "closing_3bar_l1_R": {}
+    }
+}

@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/8be6f34d6245cb6a3128bb98/w/9190b89b2c9ca32535b822e8/e/e1bee2a20fbd19c3190e8f07 -->
+<mujoco model="otr_export">
+  <compiler angle="degree" meshdir="assets" autolimits="true"/>
+  <default>
+    <default class="otr_export">
+      <joint frictionloss="0.1" armature="0.005"/>
+      <position kp="50" dampratio="1"/>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom group="3"/>
+      </default>
+    </default>
+  </default>
+  <worldbody>
+    <!-- Link batterytrayplate -->
+    <body name="batterytrayplate" pos="0 0 0.3" quat="1 0 0 0" childclass="otr_export">
+      <freejoint/>
+      <inertial pos="-0.0868275 -0.0809333 0.0615959" mass="0.270467" fullinertia="0.00029465 0.000178319 0.000368233 2.00901e-07 8.67813e-06 -1.25606e-07"/>
+      <!-- Part metalservocasing -->
+      <geom type="mesh" class="visual" pos="-0.0821533 -0.116934 0.0630993" quat="0.707059 0.707059 0.00822324 -0.00822324" mesh="metalservocasing" material="metalservocasing_material"/>
+      <geom type="mesh" class="collision" pos="-0.0821533 -0.116934 0.0630993" quat="0.707059 0.707059 0.00822324 -0.00822324" mesh="metalservocasing" material="metalservocasing_material"/>
+      <!-- Part mainbodysideplater -->
+      <geom type="mesh" class="visual" pos="-0.0997608 -0.116934 0.0716828" quat="0.707059 0.00822324 0.00822324 0.707059" mesh="mainbodysideplater" material="mainbodysideplater_material"/>
+      <geom type="mesh" class="collision" pos="-0.0997608 -0.116934 0.0716828" quat="0.707059 0.00822324 0.00822324 0.707059" mesh="mainbodysideplater" material="mainbodysideplater_material"/>
+      <!-- Part mainbodytray -->
+      <geom type="mesh" class="visual" pos="-0.0996124 -0.0551193 0.0760088" quat="0.999932 -0 0.0116294 0" mesh="mainbodytray" material="mainbodytray_material"/>
+      <geom type="mesh" class="collision" pos="-0.0996124 -0.0551193 0.0760088" quat="0.999932 -0 0.0116294 0" mesh="mainbodytray" material="mainbodytray_material"/>
+      <!-- Part batterytrayplate -->
+      <geom type="mesh" class="visual" pos="-0.0913707 -0.0551193 0.0433083" quat="0.0116294 0 -0.999932 -0" mesh="batterytrayplate" material="batterytrayplate_material"/>
+      <geom type="mesh" class="collision" pos="-0.0913707 -0.0551193 0.0433083" quat="0.0116294 0 -0.999932 -0" mesh="batterytrayplate" material="batterytrayplate_material"/>
+      <!-- Part metalservocasing_2 -->
+      <geom type="mesh" class="visual" pos="-0.0821533 -0.0449343 0.0630993" quat="0.707059 -0.707059 0.00822324 0.00822324" mesh="metalservocasing" material="metalservocasing_material"/>
+      <geom type="mesh" class="collision" pos="-0.0821533 -0.0449343 0.0630993" quat="0.707059 -0.707059 0.00822324 0.00822324" mesh="metalservocasing" material="metalservocasing_material"/>
+      <!-- Part mainbodysideplatel -->
+      <geom type="mesh" class="visual" pos="-0.0997608 -0.0509343 0.0716828" quat="0.707059 0.00822324 0.00822324 0.707059" mesh="mainbodysideplatel" material="mainbodysideplatel_material"/>
+      <geom type="mesh" class="collision" pos="-0.0997608 -0.0509343 0.0716828" quat="0.707059 0.00822324 0.00822324 0.707059" mesh="mainbodysideplatel" material="mainbodysideplatel_material"/>
+      <!-- Link l3 -->
+      <body name="l3" pos="-0.134519 -0.0449343 0.0824941" quat="0.671946 0.671946 -0.220201 0.220201">
+        <!-- Joint from batterytrayplate to l3 -->
+        <joint axis="0 0 1" name="l3_L" type="hinge"/>
+        <inertial pos="-0.036607 0 -0.0189681" mass="0.01314" fullinertia="6.50002e-07 1.49103e-05 1.49313e-05 -0 -9.42914e-07 -0"/>
+        <!-- Part l3 -->
+        <geom type="mesh" class="visual" pos="-0.04825 0 -0.0205" quat="0.707107 -0.707107 0 0" mesh="l3" material="l3_material"/>
+        <geom type="mesh" class="collision" pos="-0.04825 0 -0.0205" quat="0.707107 -0.707107 0 0" mesh="l3" material="l3_material"/>
+        <!-- Link l1 -->
+        <body name="l1" pos="-0.0965 0 -0.02425" quat="1 0 0 -0">
+          <!-- Joint from l3 to l1 -->
+          <joint axis="0 0 1" name="3bar_l3_L" type="hinge"/>
+          <inertial pos="0.0764346 -0.0777879 -0.00412838" mass="0.119088" fullinertia="7.26032e-05 7.42808e-05 0.000132366 4.86893e-05 7.3335e-06 -7.18359e-06"/>
+          <!-- Part 4010bldc -->
+          <geom type="mesh" class="visual" pos="0.0842544 -0.085447 -0.0046" quat="0.925218 0 0 0.379435" mesh="4010bldc" material="4010bldc_material"/>
+          <geom type="mesh" class="collision" pos="0.0842544 -0.085447 -0.0046" quat="0.925218 0 0 0.379435" mesh="4010bldc" material="4010bldc_material"/>
+          <!-- Part l1 -->
+          <geom type="mesh" class="visual" pos="0.0421272 -0.0427235 0.00375" quat="0.652327 -0.652327 0.272892 -0.272892" mesh="l1" material="l1_material"/>
+          <geom type="mesh" class="collision" pos="0.0421272 -0.0427235 0.00375" quat="0.652327 -0.652327 0.272892 -0.272892" mesh="l1" material="l1_material"/>
+          <!-- Frame closing_3bar_l1_L_2 -->
+          <site group="3" name="closing_3bar_l1_L_2" pos="0.017553 -0.0178015 -0" quat="0 0.925218 0.379435 -0"/>
+          <!-- Frame closing_3bar_l1_L_2_z -->
+          <site group="3" name="closing_3bar_l1_L_2_z" pos="0.017553 -0.0178015 -0.1" quat="0 0.925218 0.379435 -0"/>
+          <!-- Link wheel -->
+          <body name="wheel" pos="0.0842544 -0.085447 -0.01745" quat="0.925218 0 0 0.379435">
+            <!-- Joint from l1 to wheel -->
+            <joint axis="0 0 1" name="wheel_L"/>
+            <inertial pos="4.68e-09 9.32e-10 -0.0163679" mass="0.0572454" fullinertia="2.30695e-05 2.30695e-05 3.93734e-05 1e-12 4e-12 1e-12"/>
+            <!-- Part wheel -->
+            <geom type="mesh" class="visual" pos="0 -0 -0.002" quat="0.448662 -0.546537 0.448662 0.546537" mesh="wheel" material="wheel_material"/>
+            <geom type="mesh" class="collision" pos="0 -0 -0.002" quat="0.448662 -0.546537 0.448662 0.546537" mesh="wheel" material="wheel_material"/>
+          </body>
+        </body>
+      </body>
+      <!-- Link l2 -->
+      <body name="l2" pos="-0.0920007 -0.0206843 0.0633284" quat="0.692079 -0.692079 -0.145007 -0.145007">
+        <!-- Joint from batterytrayplate to l2 -->
+        <joint axis="0 0 1" name="servo_l2_L" type="hinge" range="-180 180"/>
+        <inertial pos="-0.0367844 0.000226275 -0.00366403" mass="0.0213579" fullinertia="2.33547e-06 2.94927e-05 3.1634e-05 -2.4977e-08 -6.7539e-08 4.15e-10"/>
+        <!-- Part l2 -->
+        <geom type="mesh" class="visual" pos="-0.047398 0 -0.00375" quat="1 -0 -0 0" mesh="l2" material="l2_material"/>
+        <geom type="mesh" class="collision" pos="-0.047398 0 -0.00375" quat="1 -0 -0 0" mesh="l2" material="l2_material"/>
+        <!-- Frame closing_3bar_l1_L_1 -->
+        <site group="3" name="closing_3bar_l1_L_1" pos="-0.104398 0 0" quat="1 -0 -0 0"/>
+        <!-- Frame closing_3bar_l1_L_1_z -->
+        <site group="3" name="closing_3bar_l1_L_1_z" pos="-0.104398 0 0.1" quat="1 -0 -0 0"/>
+      </body>
+      <!-- Link l3mirrored -->
+      <body name="l3mirrored" pos="-0.134519 -0.116934 0.0824941" quat="0.00822324 -0.00822324 -0.707059 -0.707059">
+        <!-- Joint from batterytrayplate to l3mirrored -->
+        <joint axis="0 0 1" name="l3_R" type="hinge"/>
+        <inertial pos="0.00870736 -0.0355564 -0.0189681" mass="0.01314" fullinertia="1.41035e-05 1.45682e-06 1.49313e-05 3.29462e-06 2.24282e-07 -9.15852e-07"/>
+        <!-- Part l3mirrored -->
+        <geom type="mesh" class="visual" pos="0.0114768 -0.0468652 -0.028" quat="0.436503 0.436503 0.556296 0.556296" mesh="l3mirrored" material="l3mirrored_material"/>
+        <geom type="mesh" class="collision" pos="0.0114768 -0.0468652 -0.028" quat="0.436503 0.436503 0.556296 0.556296" mesh="l3mirrored" material="l3mirrored_material"/>
+        <!-- Link l1mirrored -->
+        <body name="l1mirrored" pos="0.0229535 -0.0937304 -0.02425" quat="0.617309 0 0 0.786721">
+          <!-- Joint from l3mirrored to l1mirrored -->
+          <joint axis="0 0 1" name="3bar_l3_R" type="hinge"/>
+          <inertial pos="-0.0544714 0.0944779 -0.00412838" mass="0.119088" fullinertia="9.92914e-05 4.75926e-05 0.000132366 4.12693e-05 -4.95662e-06 8.98978e-06"/>
+          <!-- Part 4010bldc_2 -->
+          <geom type="mesh" class="visual" pos="-0.0597559 0.104064 -0.0046" quat="0.257685 -0 -0 -0.966229" mesh="4010bldc" material="4010bldc_material"/>
+          <geom type="mesh" class="collision" pos="-0.0597559 0.104064 -0.0046" quat="0.257685 -0 -0 -0.966229" mesh="4010bldc" material="4010bldc_material"/>
+          <!-- Part l1mirrored -->
+          <geom type="mesh" class="visual" pos="-0.0298779 0.0520318 0.01875" quat="0.354272 0.354272 0.611957 0.611957" mesh="l1mirrored" material="l1mirrored_material"/>
+          <geom type="mesh" class="collision" pos="-0.0298779 0.0520318 0.01875" quat="0.354272 0.354272 0.611957 0.611957" mesh="l1mirrored" material="l1mirrored_material"/>
+          <!-- Frame closing_3bar_l1_R_2 -->
+          <site group="3" name="closing_3bar_l1_R_2" pos="-0.0124491 0.0216799 0" quat="0 -0.501016 -0.865438 0"/>
+          <!-- Frame closing_3bar_l1_R_2_z -->
+          <site group="3" name="closing_3bar_l1_R_2_z" pos="-0.0124491 0.0216799 -0.1" quat="0 -0.501016 -0.865438 0"/>
+          <!-- Link wheel_2 -->
+          <body name="wheel_2" pos="-0.0597559 0.104064 -0.01745" quat="0.257685 -0 -0 -0.966229">
+            <!-- Joint from l1mirrored to wheel_2 -->
+            <joint axis="0 0 1" name="wheel_R"/>
+            <inertial pos="-1.032e-09 4.659e-09 -0.0163679" mass="0.0572454" fullinertia="2.30695e-05 2.30695e-05 3.93734e-05 -1e-12 -1e-12 4e-12"/>
+            <!-- Part wheel_2 -->
+            <geom type="mesh" class="visual" pos="-0 0 -0.002" quat="0.0767719 0.702927 0.0767719 -0.702927" mesh="wheel" material="wheel_material"/>
+            <geom type="mesh" class="collision" pos="-0 0 -0.002" quat="0.0767719 0.702927 0.0767719 -0.702927" mesh="wheel" material="wheel_material"/>
+          </body>
+        </body>
+      </body>
+      <!-- Link l2mirrored -->
+      <body name="l2mirrored" pos="-0.0920007 -0.129934 0.0633284" quat="0.707059 -0.707059 0.00822324 0.00822324">
+        <!-- Joint from batterytrayplate to l2mirrored -->
+        <joint axis="0 0 1" name="servo_l2_R" type="hinge" range="-180 180"/>
+        <inertial pos="-0.0166444 0.0328041 -0.00758597" mass="0.0213579" fullinertia="2.37769e-05 8.05125e-06 3.1634e-05 1.10705e-05 3.056e-08 -6.0231e-08"/>
+        <!-- Part l2mirrored -->
+        <geom type="mesh" class="visual" pos="-0.021706 0.0421357 0" quat="0.853801 -0 0 -0.520599" mesh="l2mirrored" material="l2mirrored_material"/>
+        <geom type="mesh" class="collision" pos="-0.021706 0.0421357 0" quat="0.853801 -0 0 -0.520599" mesh="l2mirrored" material="l2mirrored_material"/>
+        <!-- Frame closing_3bar_l1_R_1 -->
+        <site group="3" name="closing_3bar_l1_R_1" pos="-0.0478093 0.0928073 -0.01125" quat="0 0.853801 -0.520599 -0"/>
+        <!-- Frame closing_3bar_l1_R_1_z -->
+        <site group="3" name="closing_3bar_l1_R_1_z" pos="-0.0478093 0.0928073 -0.11125" quat="0 0.853801 -0.520599 -0"/>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <mesh file="l1.stl"/>
+    <mesh file="mainbodysideplater.stl"/>
+    <mesh file="l3mirrored.stl"/>
+    <mesh file="l2mirrored.stl"/>
+    <mesh file="l3.stl"/>
+    <mesh file="mainbodysideplatel.stl"/>
+    <mesh file="wheel.stl"/>
+    <mesh file="l2.stl"/>
+    <mesh file="4010bldc.stl"/>
+    <mesh file="l1mirrored.stl"/>
+    <mesh file="mainbodytray.stl"/>
+    <mesh file="batterytrayplate.stl"/>
+    <mesh file="metalservocasing.stl"/>
+    <material name="metalservocasing_material" rgba="0.298039 0.298039 0.298039 1"/>
+    <material name="mainbodysideplater_material" rgba="1 0.937255 0.137255 1"/>
+    <material name="mainbodytray_material" rgba="1 0.937255 0.137255 1"/>
+    <material name="batterytrayplate_material" rgba="1 0.937255 0.137255 1"/>
+    <material name="mainbodysideplatel_material" rgba="1 0.937255 0.137255 1"/>
+    <material name="l3_material" rgba="0.101961 0.101961 0.101961 1"/>
+    <material name="4010bldc_material" rgba="0.2 0.2 0.2 1"/>
+    <material name="l1_material" rgba="1 0.168627 0.168627 1"/>
+    <material name="wheel_material" rgba="1 0.54902 0 1"/>
+    <material name="l2_material" rgba="0.298039 0.298039 0.298039 1"/>
+    <material name="l3mirrored_material" rgba="0.101961 0.101961 0.101961 1"/>
+    <material name="l1mirrored_material" rgba="1 0.168627 0.168627 1"/>
+    <material name="l2mirrored_material" rgba="0.298039 0.298039 0.298039 1"/>
+  </asset>
+  <actuator>
+    <motor class="otr_export" name="wheel_L" joint="wheel_L"/>
+    <position class="otr_export" name="servo_l2_L" joint="servo_l2_L" inheritrange="1"/>
+    <motor class="otr_export" name="wheel_R" joint="wheel_R"/>
+    <position class="otr_export" name="servo_l2_R" joint="servo_l2_R" inheritrange="1"/>
+  </actuator>
+  <equality>
+    <connect site1="closing_3bar_l1_L_1" site2="closing_3bar_l1_L_2"/>
+    <connect site1="closing_3bar_l1_L_1_z" site2="closing_3bar_l1_L_2_z"/>
+    <connect site1="closing_3bar_l1_R_1" site2="closing_3bar_l1_R_2"/>
+    <connect site1="closing_3bar_l1_R_1_z" site2="closing_3bar_l1_R_2_z"/>
+  </equality>
+</mujoco>
