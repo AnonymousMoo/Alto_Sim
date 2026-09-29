@@ -24,4 +24,10 @@
               rgba="0.4 0.6 0.65 1" />
         <geom name="floor" size="0 0 0.05" pos="0 0 0" type="plane" material="groundplane" />
     </worldbody>
+
+    <sensor>
+      <accelerometer name="imu_acc"  site="imu"/>
+      <gyro          name="imu_gyro" site="imu"/>
+      <framequat     name="imu_quat" objtype="site" objname="imu"/>
+    </sensor>
 </mujoco>

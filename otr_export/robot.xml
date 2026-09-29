@@ -19,6 +19,7 @@
     <!-- Link batterytrayplate -->
     <body name="batterytrayplate" pos="0 0 0.3" quat="1 0 0 0" childclass="otr_export">
       <freejoint/>
+      <site name="imu" pos="-0.0868275 -0.0809333 0.0615959" quat="1 0 0 0" size="0.005"/>
       <inertial pos="-0.0868275 -0.0809333 0.0615959" mass="0.270467" fullinertia="0.00029465 0.000178319 0.000368233 2.00901e-07 8.67813e-06 -1.25606e-07"/>
       <!-- Part metalservocasing -->
       <geom type="mesh" class="visual" pos="-0.0821533 -0.116934 0.0630993" quat="0.707059 0.707059 0.00822324 -0.00822324" mesh="metalservocasing" material="metalservocasing_material"/>
